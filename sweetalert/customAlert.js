@@ -53,4 +53,8 @@ $(function () {
       console.log("Action confirmed");
     }
   });
+
+  setTimeout(() => {
+    $("#loader-container").hide();
+  }, 2000);
 });
