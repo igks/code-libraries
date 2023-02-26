@@ -1,19 +1,36 @@
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("./font/Montserrat-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("./font/Montserrat-Bold.ttf");
   font-weight: bold;
 }
 
-body{
-  font-family: 'Montserrat', sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
+
+button {
+  height: 40px;
+  width: 200px;
+  border: none;
+  background-color: #476fe6;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  margin-bottom: 10px;
+}
+/* #region Loading Animation */
 .loader {
   font-size: 10px;
   margin: 50px auto;
@@ -22,8 +39,16 @@ body{
   height: 11em;
   border-radius: 50%;
   background: #476fe6;
-  background: -moz-linear-gradient(left, #476fe6 10%, rgba(71, 111, 230, 0) 42%);
-  background: -webkit-linear-gradient(left, #476fe6 10%, rgba(71, 111, 230, 0) 42%);
+  background: -moz-linear-gradient(
+    left,
+    #476fe6 10%,
+    rgba(71, 111, 230, 0) 42%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #476fe6 10%,
+    rgba(71, 111, 230, 0) 42%
+  );
   background: -o-linear-gradient(left, #476fe6 10%, rgba(71, 111, 230, 0) 42%);
   background: -ms-linear-gradient(left, #476fe6 10%, rgba(71, 111, 230, 0) 42%);
   background: linear-gradient(to right, #476fe6 10%, rgba(71, 111, 230, 0) 42%);
@@ -43,7 +68,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  content: '';
+  content: "";
 }
 
 .loader:after {
@@ -51,7 +76,7 @@ body{
   width: 75%;
   height: 75%;
   border-radius: 50%;
-  content: '';
+  content: "";
   margin: auto;
   position: absolute;
   top: 0;
@@ -83,3 +108,4 @@ body{
     transform: rotate(360deg);
   }
 }
+/* #endregion */

@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css"/>
+  <link rel="stylesheet" href="./index.css" />
   <title>Document</title>
 </head>
-<body>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, voluptatum! Ipsum iure voluptate distinctio laudantium, corrupti fuga perspiciatis. Temporibus accusamus non perferendis eveniet enim ab ratione, distinctio esse. Possimus, quo.</p>
-  <button id="success">Success</button>
-  <br>
-  <button id="error">Error</button>
-  <br>
-  <button id="confirm">Confirm</button>
 
-  <div id="loader-container" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,255, 255, 0.6); display: flex; justify-content: center; align-items: center; z-index: 999;">
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, voluptatum! Ipsum iure voluptate distinctio
+    laudantium, corrupti fuga perspiciatis. Temporibus accusamus non perferendis eveniet enim ab ratione, distinctio
+    esse. Possimus, quo.</p>
+
+  <!-- #region  Button-->
+  <ul>
+    <li>
+      <button id="success">Alert Success</button>
+    </li>
+    <li>
+      <button id="error">Alert Error</button>
+    </li>
+    <li>
+      <button id="confirm">Confirm Dialog</button>
+    </li>
+    <li>
+      <button id="reload-success">Reload With AlertSuccess</button>
+    </li>
+    <li>
+      <button id="reload-error">Reload With Alert Error</button>
+    </li>
+  </ul>
+  <!-- #endregion -->
+
+
+  <!-- #region Loader -->
+  <div id="loader-container"
+    style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,255, 255, 0.6); display: flex; justify-content: center; align-items: center; z-index: 999;">
     <img src="spinner.gif" alt="" width="60" />
   </div>
+  <!-- #endregion -->
 
-<script src="./jquery-3.6.3.slim.min.js"></script>
-<script src="./sweetalert2.all.min.js"></script>
-<script src="./customAlert.js"></script>
+  <script src="./jquery-3.6.3.slim.min.js"></script>
+  <script src="./sweetalert2.all.min.js"></script>
+  <script src="./customAlert.js"></script>
 </body>
+
 </html>

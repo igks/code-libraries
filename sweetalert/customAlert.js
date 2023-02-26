@@ -38,7 +38,31 @@ async function confirmAlert() {
   });
 }
 
+function setAlert(type, message) {
+  localStorage.setItem(`alert-${type}`, message);
+}
+
 $(function () {
+  /* #region Custom Alert  */
+  const alertSuccessKey = `alert-${AlertType.SUCCESS}`;
+  const alertSuccess = localStorage.getItem(alertSuccessKey);
+  const alertErrorKey = `alert-${AlertType.ERROR}`;
+  const alertError = localStorage.getItem(alertErrorKey);
+  if (alertSuccess) {
+    $("#loader-container").hide();
+    showAlert(AlertType.SUCCESS, alertSuccess);
+    setTimeout(() => {
+      localStorage.removeItem(alertSuccessKey);
+    }, 1000);
+  }
+  if (alertError) {
+    $("#loader-container").hide();
+    showAlert(AlertType.ERROR, alertError);
+    setTimeout(() => {
+      localStorage.removeItem(alertErrorKey);
+    }, 1000);
+  }
+
   $("#success").on("click", function () {
     showAlert(AlertType.SUCCESS, "Successfully proceeded");
   });
@@ -54,7 +78,20 @@ $(function () {
     }
   });
 
+  $("#reload-success").on("click", function () {
+    setAlert(AlertType.SUCCESS, "Add resource successfully");
+    window.location.reload();
+  });
+
+  $("#reload-error").on("click", function () {
+    setAlert(AlertType.ERROR, "Add resource Failed");
+    window.location.reload();
+  });
+  /* #endregion */
+
+  /* #region  Loader Animation */
   setTimeout(() => {
     $("#loader-container").hide();
   }, 2000);
+  /* #endregion */
 });
